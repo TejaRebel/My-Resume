@@ -1,4 +1,4 @@
-// header login page
+// header login btn
 
 function loginPage() {
   document.querySelector(".login-page").style.display = "flex";
@@ -9,7 +9,7 @@ function closeLogin() {
   document.querySelector(".login-page").style.display = "none";
 }
 
-// header sign up page
+// header sign up btn
 
 function signUp() {
   document.querySelector(".signup-page2").style.display = "flex";
@@ -21,7 +21,7 @@ function closeSignup() {
   document.querySelector(".signup-page2").style.display = "none";
 }
 
-// buttom sign up page
+// menu bar
 function openMenu() {
   document.querySelector(".menu").style.display = "none";
   document.querySelector(".navbar").style.display = "block";
