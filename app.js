@@ -9,7 +9,7 @@ function closeLogin() {
   document.querySelector(".login-page").style.display = "none";
 }
 
-// header sign up btn
+// header signup btn
 
 function signUp() {
   document.querySelector(".signup-page2").style.display = "flex";
