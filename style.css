@@ -1,0 +1,678 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, white, aqua);
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+.scroll-btn:hover {
+  background-image: linear-gradient(to bottom, white, aqua);
+}
+
+.scroll-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+.login-page {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  margin: 2rem 0 0 2rem;
+  width: 20rem;
+  height: 20rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  background-image: linear-gradient(to bottom, white, aqua);
+  z-index: 1;
+}
+
+.login-from label,
+input {
+  position: relative;
+  margin: 1rem 0 1rem 0;
+  font-size: 20px;
+}
+
+.hidden {
+  /* visibility: hidden; */
+  opacity: 1.5;
+}
+
+.login-submit {
+  width: 8rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 0 25px 0 25px;
+  transition: all 1s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-submit:hover {
+  border-radius: 25px 0 25px 0;
+  background-image: linear-gradient(230deg, aqua, aquamarine);
+  transition: 1s;
+}
+
+.close-login {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.close-login:hover {
+  transform: rotate(250deg);
+  color: blue;
+  transition: 1s;
+}
+
+.signup-page2 {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  margin: 5rem 0 0 2rem;
+  width: 20rem;
+  height: 20rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  background-image: linear-gradient(to bottom, white, aqua);
+  z-index: 1;
+}
+
+.signup-from label {
+  position: relative;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 20px;
+}
+
+.signup-from input {
+  font-size: 15px;
+}
+
+.close-sign {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.close-sign:hover {
+  transform: rotate(250deg);
+  color: blue;
+  transition: 1s;
+}
+
+.signup-submit {
+  width: 8rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 0 25px 0 25px;
+  transition: all 1s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.signup-submit:hover {
+  border-radius: 25px 0 25px 0;
+  background-image: linear-gradient(230deg, aqua, aquamarine);
+  transition: 1s;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  width: auto;
+  height: auto;
+  background-image: linear-gradient(
+    140deg,
+    rgba(127, 255, 212, 0.534),
+    aqua,
+    darkblue
+  );
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+header img {
+  margin-top: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+}
+
+header img:hover {
+  transform: scale(1.5);
+}
+
+.navbar ul {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-items li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-items li a:hover {
+  color: black;
+}
+
+.active {
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  width: 3rem;
+  height: 1.3rem;
+  background-color: red;
+  border-bottom: 1px solid blue;
+  border-radius: 5px;
+}
+
+.nav-login {
+  display: flex;
+  gap: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-login li a {
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-login button {
+  width: 5rem;
+  height: 2rem;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0 25px 0 25px;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.nav-login button:hover {
+  border-radius: 25px 0 25px 0;
+  background-image: linear-gradient(230deg, aqua, aquamarine);
+  transition: 1s;
+}
+
+.menu {
+  width: 2rem;
+  height: 2rem;
+  display: none;
+  cursor: pointer;
+  /* transition: all 0.2s ease-in-out; */
+}
+
+.menu:hover {
+  color: black;
+}
+
+.close {
+  width: 2rem;
+  height: 2rem;
+  display: none;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.close:hover {
+  color: black;
+  transform: rotate(250deg);
+  transition: 1s;
+}
+
+@media screen and (max-width: 1570px) {
+  header {
+    position: sticky;
+    top: 0;
+    padding: 14px 2%;
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-image: linear-gradient(140deg, darkblue, aqua, aquamarine);
+    transition: 0.2s;
+    z-index: 1;
+  }
+
+  .navbar {
+    padding: 5px 0;
+    margin: 0px 0;
+    background-image: linear-gradient(to top, darkblue, aqua, aquamarine);
+  }
+
+  .nav-login {
+    padding: 5px 0;
+    margin: 0px 20px;
+    display: flex;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  header {
+    position: sticky;
+    top: 0;
+    padding: 14px 2%;
+    width: auto;
+    height: auto;
+    background-color: green;
+    transition: 0.2s;
+    z-index: 1;
+  }
+
+  .navbar {
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+
+  .nav-login {
+    padding: 5px 0;
+    margin: 0px 20px;
+    display: flex;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1078px) {
+  header {
+    position: sticky;
+    top: 0;
+    position: relative;
+    padding: 14px 2%;
+    width: auto;
+    height: auto;
+    display: flex;
+    background-color: blue;
+    transition: 0.2s;
+    z-index: 1;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 90%;
+    right: 1%;
+    padding: 5px 0 30px 10px;
+    margin: 0px 20px;
+    width: 270px;
+    height: auto;
+    display: none;
+    background-color: aqua;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px 1px gray;
+    transition: all 0.5s ease;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .nav-login {
+    padding: 5px 0;
+    margin: 0px 20px;
+    display: flex;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+.cards {
+  padding: 5rem 0 5rem 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 5rem;
+  border: 2px soild black;
+  background-image: url(https://images6.alphacoders.com/846/846732.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card {
+  padding: 3.5rem 3.5rem 3.5rem 3.5rem;
+  border: 1px solid black;
+  border-radius: 0 30px 0 30px;
+  background-image: linear-gradient(140deg, aqua, aquamarine, white);
+  transition: all 1s ease;
+  box-shadow: 5px 5px 10px 1px;
+}
+
+.card:hover {
+  border-radius: 30px 0 30px 0;
+  scale: 1.1;
+  transition: 1s;
+  background-image: linear-gradient(140deg, aqua, aquamarine, darkblue);
+}
+
+.card,
+h1,
+h2 {
+  margin-top: 1rem;
+}
+
+.my-resume {
+  padding: 8rem 0 8rem 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15rem;
+  background-image: linear-gradient(to top, aqua, aquamarine);
+}
+
+.code-text {
+  color: white;
+  text-shadow: 5px 5px 5px 5px gray;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 20px blue, 0px 0px 20px aqua, 0px 0px 20px blue,
+      0px 0px 20px aqua, 0px 0px 20px blue;
+  }
+}
+
+.resume-btn {
+  margin: 2rem 0 0 2rem;
+  padding: 1.3rem 1.3rem 1.3rem 1.3rem;
+  background-image: linear-gradient(140deg, aquamarine, aqua, white);
+  border: 1px solid black;
+  border-radius: 0 25px 0 25px;
+  transition: all 1s ease;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px 1px;
+}
+
+.resume-btn a {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.resume-btn:hover {
+  border-radius: 25px 0 25px 0;
+  transform: scale(1.1);
+  background-image: linear-gradient(230deg, darkblue, aqua, aquamarine);
+  transition: 1s;
+}
+
+.btn-1 {
+  margin-top: 1rem;
+  width: 6rem;
+  height: 2rem;
+  font-weight: bold;
+  border-radius: 0 10px 0 10px;
+  background-color: aqua;
+  cursor: pointer;
+  transition: all 1s ease;
+  background-image: linear-gradient(230deg, white, aqua, aquamarine);
+}
+
+.btn-1:hover {
+  border-radius: 10px 0 10px 0;
+  scale: 1.1;
+  transition: 1s;
+  background-image: linear-gradient(230deg, aqua, aquamarine);
+}
+
+.btn-1 a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.project-code {
+  padding: 5rem 0 5rem 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to top, aquamarine, aqua);
+}
+
+.project-head-text {
+  padding: 0 0 5px 0;
+  border-bottom: 2px solid black;
+  font-size: 2rem;
+}
+
+.project-aside-1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.project-aside-1 img {
+  width: 80%;
+  height: auto;
+  box-shadow: 5px 5px 10px 1px;
+}
+
+.project-aside-2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.project-aside-2 img {
+  width: 80%;
+  height: auto;
+  box-shadow: 5px 5px 10px 1px;
+}
+
+.project-aside-3 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.project-aside-3 img {
+  width: 80%;
+  height: auto;
+  box-shadow: 5px 5px 10px 1px;
+}
+
+.project-btn {
+  margin: 1rem 0 2rem 0;
+  width: 8rem;
+  height: 3rem;
+  background-image: linear-gradient(140deg, aquamarine, aqua, white);
+  border: 1px solid black;
+  border-radius: 0 25px 0 25px;
+  transition: all 1s ease;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px 1px;
+}
+
+.project-btn a {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.project-btn:hover {
+  border-radius: 25px 0 25px 0;
+  transform: scale(1.1);
+  background-image: linear-gradient(230deg, darkblue, aqua, aquamarine);
+  transition: 1s;
+}
+
+.samples {
+  padding: 2rem 0 2rem 0;
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(to top, rgb(0, 64, 255), rgb(234, 0, 255));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-text {
+  margin-left: 2rem;
+  padding-bottom: 5px;
+  display: inline;
+  color: black;
+  border-bottom: 5px solid black;
+  border-width: 2px;
+}
+
+.videos {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.videos img {
+  width: 350px;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: all 1s ease;
+}
+
+.videos img:hover {
+  box-shadow: 1px 1px 5px 1px aqua;
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.signup {
+  padding: 5rem 0 5rem 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  background-image: url(https://img.freepik.com/free-vector/blue-curve-background_53876-113112.jpg?w=1380&t=st=1678530751~exp=1678531351~hmac=0540e2a2002f3748f119e78b30bbad6d70fbf5c636fe3eb4a951b798bc9e1543);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup-form {
+  margin-top: 5rem;
+  width: 25rem;
+  height: 23rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 30px 0 30px 0;
+  background-image: url(https://img.freepik.com/free-vector/blue-watercolor-background_1199-251.jpg?w=1380&t=st=1678529965~exp=1678530565~hmac=ccc57412340e75ebe3f4fa9174a642f04a433b0fc9ece9bc5949fc716687128f);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 5px 5px 10px 1px;
+}
+
+.signup-page {
+  width: 20rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.signup-page input {
+  padding: 0 0 0 0.5rem;
+  width: 19rem;
+  height: 2.5rem;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 10px 0 10px 0;
+}
+
+.signup-benefits {
+  margin-top: 0rem;
+  margin-left: 5rem;
+}
+
+.signup-text {
+  font-size: 40px;
+}
+
+.signup-text2 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.submit-footer {
+  width: 5rem;
+  height: auto;
+  cursor: pointer;
+}
+
+.submit-footer:hover {
+  background-color: aqua;
+  transform: translateY(-3px);
+  transition-duration: 1s;
+}
