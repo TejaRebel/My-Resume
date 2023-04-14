@@ -14,13 +14,13 @@
     <script src="app.js"></script>
   </head>
   <body id="home">
-    <section>
+    <div>
       <button class="scroll-btn" title="Go To Top">
         <img src="./media/arrow-up.png" onclick="goTop()" alt="Top Arrow" />
       </button>
-    </section>
-    <section class="login-page">
-      <aside class="login-from">
+    </div>
+    <div class="login-page">
+      <div class="login-from">
         <ion-icon
           class="close-login"
           onclick="closeLogin()"
@@ -34,11 +34,11 @@
           <br />
           <input class="login-submit" type="submit" value="Login" />
         </form>
-      </aside>
-    </section>
+      </div>
+    </div>
 
-    <section class="signup-page2">
-      <aside class="signup-from">
+    <div class="signup-page2">
+      <div class="signup-from">
         <ion-icon
           class="close-sign"
           onclick="closeSignup()"
@@ -59,8 +59,8 @@
           <br />
           <input class="signup-submit" type="submit" value="Sign Up" />
         </form>
-      </aside>
-    </section>
+      </div>
+    </div>
 
     <header>
       <img
@@ -76,7 +76,7 @@
           <li><a href="#free-member">Free Membership</a></li>
         </ul>
       </nav>
-      <aside class="nav-login">
+      <div class="nav-login">
         <button class="login-btn" onclick="loginPage()">Log In</button>
         <button class="signup-btn" onclick="signUp()">Sign Up</button>
         <ion-icon
@@ -89,47 +89,47 @@
           onclick="closeMenu()"
           name="close-outline"
         ></ion-icon>
-      </aside>
+      </div>
     </header>
 
-    <section class="cards">
-      <aside class="card">
+    <div class="cards">
+      <div class="card">
         <h1>Koribilli Teja</h1>
         <h2>Resume</h2>
         <button class="btn-1">
           <a href="#my-resume">My Resume</a>
         </button>
-      </aside>
-      <aside class="card">
-        <h1>TejaRebel</h1>
+      </div>
+      <div class="card">
+        <h1>Koribilli Teja</h1>
         <h2>Developer</h2>
         <button class="btn-1"><a href="#my-projects">Projects</a></button>
-      </aside>
-      <aside class="card">
+      </div>
+      <div class="card">
         <h1>TejaRebel</h1>
         <h2>Youtuber</h2>
         <button class="btn-1"><a href="#videos">Videos</a></button>
-      </aside>
-    </section>
+      </div>
+    </div>
 
-    <section class="my-resume" id="my-resume">
-      <aside>
+    <div class="my-resume" id="my-resume">
+      <div>
         <h2 class="code-text">Check My Resume Here</h2>
         <button class="resume-btn">
           <a href="./MY RESUME.docx" onclick="willDownload()">My Resume</a>
         </button>
-      </aside>
-      <aside>
+      </div>
+      <div>
         <h2 class="code-text">Check My Projects Here</h2>
         <button class="resume-btn">
           <a href="https://github.com/TejaRebel">My Projects</a>
         </button>
-      </aside>
-    </section>
+      </div>
+    </div>
 
-    <section class="project-code" id="my-projects">
+    <div class="project-code" id="my-projects">
       <h1 class="project-head-text">My Projects ScreenShots</h1>
-      <aside class="project-aside-1">
+      <div class="project-text">
         <h1>Swiggy Template</h1>
         <button class="project-btn">
           <a href="https://github.com/TejaRebel/Swiggy-HomePage"
@@ -137,8 +137,8 @@
           ></button
         ><br />
         <img src="./media/swiggy.png" alt="swiggy project ss" />
-      </aside>
-      <aside class="project-aside-3">
+      </div>
+      <div class="project-text">
         <h1>Opins Template</h1>
         <button class="project-btn">
           <a href="https://github.com/TejaRebel/opins-Template"
@@ -146,8 +146,8 @@
           ></button
         ><br />
         <img src="./media/opins template.png" alt="opins project ss" />
-      </aside>
-      <aside class="project-aside-2">
+      </div>
+      <div class="project-text">
         <h1>Flipkart Template ( BootStrap )</h1>
         <button class="project-btn">
           <a href="https://github.com/TejaRebel/Flipkart-BootStrap"
@@ -155,12 +155,21 @@
           ></button
         ><br />
         <img src="./media/filpkart.png" alt="opins project ss" />
-      </aside>
-    </section>
+      </div>
+      <div class="project-text">
+        <h1>Messho Template ( BootStrap )</h1>
+        <button class="project-btn">
+          <a href="https://github.com/TejaRebel/Flipkart-BootStrap"
+            >Project Code</a
+          ></button
+        ><br />
+        <img src="./media/meesho.png" alt="opins project ss" />
+      </div>
+    </div>
 
-    <section class="samples" id="videos">
+    <div class="samples" id="videos">
       <h2 class="video-text">Click On Them To Check My Video's</h2>
-      <aside class="videos">
+      <div class="videos">
         <a href="https://youtu.be/kBKH-lkWxUw">
           <img
             src="https://i.ytimg.com/vi/kBKH-lkWxUw/maxresdefault.jpg"
@@ -196,19 +205,19 @@
             alt="Video Image"
           />
         </a>
-      </aside>
-    </section>
+      </div>
+    </div>
 
-    <section class="signup" id="free-member">
-      <aside class="signup-benefits">
+    <div class="signup" id="free-member">
+      <div class="signup-benefits">
         <h1 class="signup-text">Sign Up Benefits</h1>
         <h1 class="signup-text2">Free Watch Time + Free Subscription</h1>
         <iframe
           src="https://giphy.com/embed/qEb7Nv5DsWKBttpAqY"
           style="width: 300px; height: 300px"
         ></iframe>
-      </aside>
-      <aside class="signup-form">
+      </div>
+      <div class="signup-form">
         <form class="signup-page">
           <input type="text" placeholder="Enter Your Username" required />
           <input type="password" placeholder="Enter Your Password" required />
@@ -224,9 +233,9 @@
             style="width: 8rem"
           />
         </form>
-      </aside>
-    </section>
-    <section class="overlay hidden"></section>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
   <script
     type="module"
